@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios';
 
 function Home() {
   const [username, setUsername] = useState("");
@@ -12,11 +13,20 @@ function Home() {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your login logic here
-    console.log("Username:", username);
-    console.log("Password:", password);
+    try {
+      const response = await axios.get(`http://localhost:8070/customer/get?username=${username}`);
+
+      if (response.data.password === password) {
+        alert('Login successful');
+      } else {
+        alert('Login unsuccessful');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Login unsuccessful');
+    }
   };
 
   const styles = {
