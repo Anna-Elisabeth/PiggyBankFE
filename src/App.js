@@ -5,6 +5,8 @@ import Home from './components/home/Home';
 import Hints from './components/hints/Hints';
 import piggy1 from "./piggy1.png";
 import CreditScore from './components/creditScore/CreditScore';
+import Planner from './components/budgetPlanner/Planner';
+
 
 
 
@@ -75,6 +77,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/hints' element={<Hints />} />
       <Route path='/creditscore' element={<CreditScore />} />
+      <Route path='/planner' element={<Planner />} />
 
       
       
