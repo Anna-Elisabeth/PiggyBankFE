@@ -1,0 +1,15 @@
+.btn-custom {
+    text-decoration: none;
+    color: #000; /* Black color */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px 20px; /* Adjust padding for button size */
+    border: 2px solid #000; /* Black border */
+    background-color: #fff; /* White background */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 5px; /* Add margin between buttons */
+  }
+
+  .btn-custom:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #000; /* Change background color on hover */
+  }
