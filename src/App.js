@@ -5,6 +5,9 @@ import Home from './components/home/Home';
 import Hints from './components/hints/Hints';
 import piggy1 from "./piggy1.png";
 import CreditScore from './components/creditScore/CreditScore';
+import Planner from './components/budgetPlanner/Planner';
+import Calculator from './components/calculator/Calculator';
+
 
 
 
@@ -52,6 +55,12 @@ function App() {
                 <li class="nav-item">
                     <a class="nav-link" href="/creditscore">Credit Score</a>
                 </li>
+                <li class="nav-item ">
+                <a class="nav-link" href="/planner">Budget Planner</a>
+                </li>
+                <li class="nav-item ">
+                <a class="nav-link" href="/calculator">Calculator</a>
+                </li>
                 
                 
             </ul>
@@ -75,6 +84,9 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/hints' element={<Hints />} />
       <Route path='/creditscore' element={<CreditScore />} />
+      <Route path='/planner' element={<Planner />} />
+      <Route path='/calculator' element={<Calculator/>} />
+
 
       
       
