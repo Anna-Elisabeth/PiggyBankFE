@@ -2,7 +2,9 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/home/Home';
+import Hints from './components/hints/Hints';
 import piggy1 from "./piggy1.png";
+import CreditScore from './components/creditScore/CreditScore';
 
 
 
@@ -45,7 +47,7 @@ function App() {
                     <a class="nav-link" href="/">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/handyhints">Handy Hints</a>
+                    <a class="nav-link" href="/hints">Handy Hints</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/creditscore">Credit Score</a>
@@ -71,7 +73,10 @@ function App() {
      
       <Routes>
       <Route path='/' element={<Home />} />
-     
+      <Route path='/hints' element={<Hints />} />
+      <Route path='/creditscore' element={<CreditScore />} />
+
+      
       
      
       

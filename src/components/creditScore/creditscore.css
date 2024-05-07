@@ -1,0 +1,12 @@
+.creditbody {
+    background: linear-gradient(to right, 
+    #f5eee6, 
+    #f3d7ca
+    
+    );
+    /* Ensure the background covers the whole page */
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
