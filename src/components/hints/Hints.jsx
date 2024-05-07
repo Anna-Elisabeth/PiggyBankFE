@@ -11,6 +11,7 @@ const Hints = () => {
         'Automate your savings by setting up automatic transfers.',
         'Track your expenses to identify areas where you can cut back.',
         'Consider investing your money for long-term growth.',
+        "Avoid the debt sty. Don't let impulse purchases boar a hole in your wallet.",
     ];
 
     const [selectedHints, setSelectedHints] = useState([]);

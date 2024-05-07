@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/home/Home';
 import Hints from './components/hints/Hints';
 import piggy1 from "./piggy1.png";
+import CreditScore from './components/creditScore/CreditScore';
 
 
 
@@ -73,6 +74,9 @@ function App() {
       <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/hints' element={<Hints />} />
+      <Route path='/creditscore' element={<CreditScore />} />
+
+      
       
      
       
