@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from './context/AppContext';
 import { v4 as uuidv4 } from 'uuid';
+import './budget.css';
 
 function AddExpenseForm() {
     const { dispatch } = useContext(AppContext);
@@ -52,7 +53,7 @@ function AddExpenseForm() {
 			</div>
 			<div class='row mt-3'>
 				<div class='col-sm'>
-					<button type='submit' class='btn btn-primary'>
+					<button type='submit' class='btn btn-custom'>
 						Save
 					</button>
 				</div>

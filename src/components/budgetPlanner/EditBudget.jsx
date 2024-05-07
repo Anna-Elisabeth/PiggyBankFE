@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './budget.css';
 
 function EditBudget(props) {
 	const [value, setValue] = useState(props.budget);
@@ -14,7 +15,7 @@ function EditBudget(props) {
 			/>
 			<button
 				type='button'
-				class='btn btn-primary'
+				class='btn btn-custom'
 				onClick={() => props.handleSaveClick(value)}
 			>
 				Save
