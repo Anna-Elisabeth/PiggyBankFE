@@ -25,7 +25,7 @@ function Home() {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      height: "85vh",
+      height: "90vh",
       backgroundColor: "#FFD1DC", // Light pink background
     },
     form: {
