@@ -1,6 +1,3 @@
-
-
-
 /* navbar */
 
 .gradient-custom {
@@ -8,29 +5,27 @@
   background: #141313;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, 
-  #f5eee6, 
-  #f3d7ca,
-  #e6a4b4,
-  #c86b85 
+  background: -webkit-linear-gradient(
+    to right,
+    #f5eee6,
+    #f3d7ca,
+    #e6a4b4,
+    #c86b85
   );
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, 
-  #f5eee6, 
-  #f3d7ca, 
-  #e6a4b4,
-  /* #3a3a3a, */
-  #c86b85 
-  
+  background: linear-gradient(
+    to right,
+    #f5eee6,
+    #f3d7ca,
+    #e6a4b4,
+    /* #3a3a3a, */ #c86b85
   );
 }
-
 
 .navbar-brand {
   width: 100px; /* adjust as needed */
   height: 100px; /* adjust as needed */
- 
 }
 
 .navbar {
@@ -53,11 +48,7 @@
   margin: 0 5px; /* Add margin between buttons */
 }
 
-
 .navbar a:hover {
   color: #fff; /* Change text color on hover */
   background-color: #000; /* Change background color on hover */
 }
-
-
-
