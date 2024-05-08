@@ -171,7 +171,6 @@ function MeetTheTeam() {
             {text5 && <p className="text">{text5}</p>}
           </div>
         </div>
-
         <Card style={{ marginTop: "50px" }} border="light" border-10>
           <Card.Body>
             <Card.Title style={{ textAlign: "center" }}>
@@ -181,11 +180,11 @@ function MeetTheTeam() {
               </h1>
             </Card.Title>
 
-            <img src={Dylan} />
-            <img src={Piers} />
-            <img src={Jordan} />
-            <img src={Rob} />
-            <img src={Chris} />
+                    <img src={Dylan} alt="Piggy Dylan"/>
+                    <img src={Piers} alt="Piggy Piers"/>
+                    <img src={Jordan} alt="Piggy Jordan"/>
+                    <img src={Rob} alt="Piggy Rob"/>
+                    <img src={Chris} alt="Piggy Chris"/>
           </Card.Body>
         </Card>
       </div>
