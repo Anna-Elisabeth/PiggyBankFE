@@ -1,0 +1,57 @@
+.helpbody {
+    background: linear-gradient(to right, 
+    #f5eee6, 
+    #f3d7ca
+    
+    );
+    /* Ensure the background covers the whole page */
+    height: 300vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.centered {
+    text-align: center;
+}
+
+.heading {
+    background-color: white;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto;
+   
+}
+.box {
+    border: 2px solid #000;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    width: 70%;
+
+
+.center {
+        display: block;
+        margin: 20px auto; /* adjust as needed */
+        width: 80px; /* adjust as needed */
+        height: 80px; /* adjust as needed */
+        padding: 10px; /* adjust as needed */
+    }
+
+}
+
+@keyframes move {
+    0% { transform: translateX(600%); }
+    100% { transform: translateX(-200%); }
+}
+
+
+.moving-image {
+    animation: move 5s linear infinite;
+}

@@ -11,6 +11,8 @@ import CreateUser from './components/user/CreateUser';
 import MeetTheTeam from './components/meetTheTeam/MeetTheTeam';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState } from 'react';
+import Help from './components/financialHelp/Help';
+
 
 
 function App() {
@@ -77,9 +79,16 @@ function App() {
                                         <a class="nav-link" href="/register">Register</a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="/theteam">Meet The Team</a>
+
+                                        <a class="nav-link" href="/help">Help & Support</a>
+
+                              
                                     </li>
 
+                                    <li class="nav-item ">
+                                       
+                                        <a class="nav-link" href="/theteam">Meet The Team</a>
+                                    </li>
 
                                 </ul>
                                 {/* <!-- Left links --> */}
@@ -105,7 +114,9 @@ function App() {
                         <Route path='/planner' element={<Planner />} />
                         <Route path='/calculator' element={<Calculator />} />
                         <Route path='/register' element={<CreateUser />} />
+                        <Route path='/help' element={<Help />} />
                         <Route path='/theteam' element={<MeetTheTeam />} />
+
 
 
 
