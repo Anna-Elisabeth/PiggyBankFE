@@ -4,15 +4,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/home/Home";
 import Hints from "./components/hints/Hints";
 import piggy1 from "./piggy1.png";
-import CreditScore from "./components/creditScore/CreditScore";
-import Planner from "./components/budgetPlanner/Planner";
-import Calculator from "./components/calculator/Calculator";
-import CreateUser from "./components/user/CreateUser";
-import MeetTheTeam from "./components/meetTheTeam/MeetTheTeam";
-import Modal from "react-bootstrap/Modal";
-import React, { useState } from "react";
-import Help from "./components/financialHelp/Help";
+
+import CreditScore from './components/creditScore/CreditScore';
+import Planner from './components/budgetPlanner/Planner';
+import Calculator from './components/calculator/Calculator';
+import CreateUser from './components/user/CreateUser';
+import MeetTheTeam from './components/meetTheTeam/MeetTheTeam';
+import Modal from 'react-bootstrap/Modal';
+import React, { useState } from 'react';
+import Help from './components/financialHelp/Help';
+import HintList from './components/hints/HintList';
 import MyCalendar from "./components/budgetPlanner/MyCalendar";
+
+
 
 function App() {
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
@@ -80,45 +84,57 @@ function App() {
                       Credit Score
                     </a>
                   </li>
-                  {/* <li class="nav-item ">
-                                        <a class="nav-link" href="/planner">Budget Planner</a>
-                                    </li> */}
-                  <li class="nav-item ">
-                    <a class="nav-link" href="/calculator">
-                      Calculator
-                    </a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link" href="/register">
-                      Register
-                    </a>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link" href="/help">
-                      Help & Support
-                    </a>
-                  </li>
+                 
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="/calculator">Calculator</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="/register">Register</a>
+                                    </li>
+                                    <li class="nav-item ">
 
-                  <li class="nav-item ">
-                    <a class="nav-link" href="/theteam">
-                      Meet The Team
-                    </a>
-                  </li>
+                                        <a class="nav-link" href="/help">Help & Support</a>
+
+                                    </li>
+
+                                    <li class="nav-item ">
+                                       
+                                        <a class="nav-link" href="/theteam">Meet The Team</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                       
+                                       <a class="nav-link" href="/hintlist">Your fav. hints</a>
+                                   </li>
+
+              
+                  
+
                   <li class="nav-item ">
                     <a class="nav-link" href="/mycalendar">
                       Calendar
                     </a>
                   </li>
-                </ul>
-                {/* <!-- Left links --> */}
-              </div>
-              {/* <!-- Collapsible wrapper --> */}
 
-              {/* <!-- Right elements --> */}
-            </div>
-            {/* <!-- Container wrapper --> */}
-          </nav>
-          {/* <!-- Navbar --> */}
+
+                                </ul>
+                                {/* <!-- Left links --> */}
+                            </div>
+                            {/* <!-- Collapsible wrapper --> */}
+
+
+
+
+                            {/* <!-- Right elements --> */}
+                        </div>
+                        {/* <!-- Container wrapper --> */}
+                    </nav>
+                    {/* <!-- Navbar --> */}
+
+
+
+
+  
+                      
 
           <Routes>
             <Route path="/" element={<Home />} />
@@ -130,6 +146,7 @@ function App() {
             <Route path="/help" element={<Help />} />
             <Route path="/theteam" element={<MeetTheTeam />} />
             <Route path="/mycalendar" element={<MyCalendar />} />
+                <Route path='/hintlist' element={<HintList />} />
           </Routes>
         </BrowserRouter>
       </div>

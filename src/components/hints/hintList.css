@@ -1,0 +1,25 @@
+.hint-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.hint-list-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.hint-list-title {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hint-list-content {
+    margin: 0;
+    font-size: 16px;
+}
