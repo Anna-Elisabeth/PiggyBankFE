@@ -8,16 +8,24 @@ import CreditScore from './components/creditScore/CreditScore';
 import Planner from './components/budgetPlanner/Planner';
 import Calculator from './components/calculator/Calculator';
 import CreateUser from './components/user/CreateUser';
+import MeetTheTeam from './components/meetTheTeam/MeetTheTeam';
+import Modal from 'react-bootstrap/Modal';
+import React, { useState } from 'react';
 import Help from './components/financialHelp/Help';
 
 
 
-
 function App() {
+
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
     return (
         <body>
 
-
+<Modal show={isImageModalOpen} onHide={() => setIsImageModalOpen(false)}>
+    <Modal.Body>
+        <img src={piggy1} alt="Logo" style={{ width: '100%', height: 'auto' }} />
+    </Modal.Body>
+</Modal>
 
             <div>
                 <BrowserRouter>
@@ -43,8 +51,12 @@ function App() {
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 {/* <!-- Navbar brand --> */}
                                 <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                                    <img src={piggy1} alt="Logo" style={{ width: '100%', height: '100%' }} />
-                                </a>
+                                <img
+    src={piggy1}
+    alt="Logo"
+    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+    onClick={() => setIsImageModalOpen(true)}
+/></a>
 
                                 {/* <!-- Left links --> */}
                                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -57,9 +69,9 @@ function App() {
                                     <li class="nav-item">
                                         <a class="nav-link" href="/creditscore">Credit Score</a>
                                     </li>
-                                    <li class="nav-item ">
+                                    {/* <li class="nav-item ">
                                         <a class="nav-link" href="/planner">Budget Planner</a>
-                                    </li>
+                                    </li> */}
                                     <li class="nav-item ">
                                         <a class="nav-link" href="/calculator">Calculator</a>
                                     </li>
@@ -67,9 +79,16 @@ function App() {
                                         <a class="nav-link" href="/register">Register</a>
                                     </li>
                                     <li class="nav-item ">
+
                                         <a class="nav-link" href="/help">Help & Support</a>
+
+                              
                                     </li>
 
+                                    <li class="nav-item ">
+                                       
+                                        <a class="nav-link" href="/theteam">Meet The Team</a>
+                                    </li>
 
                                 </ul>
                                 {/* <!-- Left links --> */}
@@ -96,6 +115,8 @@ function App() {
                         <Route path='/calculator' element={<Calculator />} />
                         <Route path='/register' element={<CreateUser />} />
                         <Route path='/help' element={<Help />} />
+                        <Route path='/theteam' element={<MeetTheTeam />} />
+
 
 
 

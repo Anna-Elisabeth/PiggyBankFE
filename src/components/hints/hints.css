@@ -5,7 +5,7 @@
     
     );
     /* Ensure the background covers the whole page */
-    height: 100vh;
+    height: 300vh;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -44,4 +44,17 @@
 
 .list-items {
     font-size: 2em; /* Adjust size as needed */
+}
+
+
+/* pig movement */
+
+@keyframes move {
+    0% { transform: translateX(300%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+.moving-image {
+    animation: move 5s linear infinite;
 }
