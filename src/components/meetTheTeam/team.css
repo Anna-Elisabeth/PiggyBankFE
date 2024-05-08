@@ -51,24 +51,24 @@
   }
   
   .item-1 { 
-    background-image:url('C:\Users\User\PiggyBankFE\src\andrewpig.png');
-  }
+    background-image: url('../../andrewpig.png');
+}
 
-  .item-2 { 
-    background-image: url('C:\Users\User\PiggyBankFE\src\michaelapig.png');
-  }
+.item-2 { 
+    background-image: url('../../michaelapig.png');
+}
 
-  .item-3 { 
-    background-image: url('C:\Users\User\PiggyBankFE\src\annapig.png');
-  }
+.item-3 { 
+    background-image: url('../../annapig.png');
+}
 
-  .item-4 { 
-    background-image: url('C:\Users\User\PiggyBankFE\src\lucypig.png');
-  }
-  
-  .item-5 { 
-    background-image: url('C:\Users\User\PiggyBankFE\src\adelepig.png');
-  }
+.item-4 { 
+    background-image: url('../../lucypig.png');
+}
+
+.item-5 { 
+    background-image: url('../../adelepig.png');
+}
   
   
   
