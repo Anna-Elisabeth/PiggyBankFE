@@ -7,6 +7,8 @@ import ExpenseList from "./ExpenseList";
 import AddExpenseForm from "./AddExpenseForm";
 import RemainingBudget from "./Remaining";
 
+
+
 function Planner() {
   // Define styles for the pig/pink theme
   const styles = {
@@ -21,6 +23,7 @@ function Planner() {
   };
 
   return (
+    <div>
     <AppProvider>
       <div style={styles.container}>
         <h1 className="mt-3" style={styles.title}>
@@ -55,6 +58,11 @@ function Planner() {
         </div>
       </div>
     </AppProvider>
+   
+
+
+
+    </div>
   );
 }
 

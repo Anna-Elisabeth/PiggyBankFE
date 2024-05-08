@@ -8,7 +8,7 @@ function ExpenseTotal() {
 		return (total += item.cost);
 	}, 0);
     return ( 
-        <div class='alert alert-primary p-4'>
+        <div class='alert alert-primary p-4' >
 			<span>Spent so far: £{total}</span>
 		</div>
      );
