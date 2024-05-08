@@ -117,11 +117,11 @@ function MeetTheTeam(){
                 <Card.Body>
                     <Card.Title style={{textAlign: "center"}}> <h1><b> Special Thanks  </b></h1></Card.Title>
 
-                    <img src={Dylan} />
-                    <img src={Piers} />
-                    <img src={Jordan} />
-                    <img src={Rob} />
-                    <img src={Chris} />
+                    <img src={Dylan} alt="Piggy Dylan"/>
+                    <img src={Piers} alt="Piggy Piers"/>
+                    <img src={Jordan} alt="Piggy Jordan"/>
+                    <img src={Rob} alt="Piggy Rob"/>
+                    <img src={Chris} alt="Piggy Chris"/>
                 </Card.Body>
               </Card>
            </div>   
