@@ -1,0 +1,22 @@
+/* Change the background color of the calendar */
+.react-calendar {
+ background-color: #f6ebee; /* Light pink background */
+}
+
+/* Change the color of the calendar days */
+.react-calendar__month-view__days__day {
+ color: #000000; 
+}
+
+/* Change the background color of the selected day */
+.react-calendar__month-view__days__day--today,
+.react-calendar__month-view__days__day--weekend,
+.react-calendar__month-view__days__day--neighboringMonth {
+ background-color: #f870c2; 
+}
+
+/* Change the color of the navigation buttons */
+.react-calendar__navigation button {
+ background-color: #f870c2; 
+ color: rgb(0, 0, 0);
+}
