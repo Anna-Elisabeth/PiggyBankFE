@@ -8,6 +8,7 @@ import CreditScore from './components/creditScore/CreditScore';
 import Planner from './components/budgetPlanner/Planner';
 import Calculator from './components/calculator/Calculator';
 import CreateUser from './components/user/CreateUser';
+import MeetTheTeam from './components/meetTheTeam/MeetTheTeam';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState } from 'react';
 
@@ -75,6 +76,9 @@ function App() {
                                     <li class="nav-item ">
                                         <a class="nav-link" href="/register">Register</a>
                                     </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="/theteam">Meet The Team</a>
+                                    </li>
 
 
                                 </ul>
@@ -101,6 +105,7 @@ function App() {
                         <Route path='/planner' element={<Planner />} />
                         <Route path='/calculator' element={<Calculator />} />
                         <Route path='/register' element={<CreateUser />} />
+                        <Route path='/theteam' element={<MeetTheTeam />} />
 
 
 
