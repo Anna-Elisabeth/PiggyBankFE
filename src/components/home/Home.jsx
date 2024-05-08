@@ -16,9 +16,11 @@ function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:8070/customer/get?username=${username}`);
+      const response = await axios.get('http://localhost:8070/customer/get');
 
-      if (response.data.password === password) {
+      const user = response.data.find(user => user.username === username && user.password === password);
+
+      if (user) {
         alert('Login successful');
       } else {
         alert('Login unsuccessful');
