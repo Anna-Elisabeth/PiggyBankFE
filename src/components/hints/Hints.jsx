@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './hints.css';
 import fastPiggy from './fastPiggy.png';
+import axios from 'axios';
 
 const Hints = () => {
     const hints = [
@@ -17,7 +18,6 @@ const Hints = () => {
         'Track your expenses to identify areas where you can cut back.',
         "Don't go whole hog - don't spend everything you earn, leave some for the future",
         'Consider investing your money for long-term growth.',
-
     ];
 
     const [selectedHints, setSelectedHints] = useState([]);
@@ -36,6 +36,17 @@ const Hints = () => {
 
     const handleHintClick = () => {
         setSelectedHints([...selectedHints, hints[currentHintIndex]]);
+    };
+
+    const handleCreateHint = async () => {
+        const hintsString = selectedHints.join(', ');
+        try {
+            await axios.post('http://localhost:8070/hint/create', { hintList: hintsString });
+            alert('Hint created successfully');
+            setSelectedHints([]); // Clear the list of selected hints
+        } catch (error) {
+            console.error('Error creating hint', error);
+        }
     };
 
     return (
@@ -58,9 +69,10 @@ const Hints = () => {
                         <li key={index} className="list-items">{hint}</li>
                     ))}
                 </ol>
+                <button onClick={handleCreateHint}>Share Your Favourite Hints</button>
             </div>
             <div>
-            <img src={fastPiggy} alt='fast piggy' className="moving-image" />
+                <img src={fastPiggy} alt='fast piggy' className="moving-image" />
             </div>
         </div>
     );
