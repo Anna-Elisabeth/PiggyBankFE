@@ -1,0 +1,12 @@
+.heading {
+    background-color: white;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto;
+   
+}
