@@ -1,6 +1,6 @@
 ![Piggy Bank](./PiggBank.jpg)
 
-# a user-friendly Money Manager App that helps people take charge of their finances in a simple and secure way
+# A user-friendly Money Manager App that helps people take charge of their finances in a simple and secure way
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

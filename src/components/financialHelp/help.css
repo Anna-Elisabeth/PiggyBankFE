@@ -45,3 +45,13 @@
     }
 
 }
+
+@keyframes move {
+    0% { transform: translateX(600%); }
+    100% { transform: translateX(-200%); }
+}
+
+
+.moving-image {
+    animation: move 5s linear infinite;
+}

@@ -1,5 +1,7 @@
 import './help.css';
 import piggy2 from "../piggy2.png";
+import fastPiggy from './fastPiggy.jpg';
+import SadPig from './SadPig.jpg';
 
 function Help() {
     return (
@@ -7,6 +9,10 @@ function Help() {
             <br />
             <h2 className="heading">Help & Support</h2>
             <br/>
+            <div>
+            {/* <img src={fastPiggy} alt='fast piggy' className="moving-image" /> */}
+            <img src={SadPig} alt='Sad piggy' className="moving-image" />
+            </div>
             <div className="box">
                 <img src={piggy2} alt="Piggy" className="center" />
                 <h3 className='centered'>🐷<strong>Welcome to our Piggy Bank's Help and Support Page!</strong>  🐷 <br /><br />
