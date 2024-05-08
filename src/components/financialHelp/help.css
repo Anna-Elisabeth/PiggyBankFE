@@ -1,4 +1,4 @@
-.hintbody {
+.helpbody {
     background: linear-gradient(to right, 
     #f5eee6, 
     #f3d7ca
@@ -9,6 +9,9 @@
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+.centered {
+    text-align: center;
 }
 
 .heading {
@@ -23,35 +26,29 @@
     margin: 0 auto;
    
 }
-
-.items {
-    font-family: Verdana, sans-serif;
-    font-size: 2em; /* Adjust size as needed */
-    font-weight: bold;
-    text-align: center;
-    padding-top: 40px; /* Add padding to the top */
-    padding-bottom: 40px; /* Add padding to the bottom */
-}
-
-
-.saved-hints-box {
-    border: 10px solid black;
+.box {
+    border: 2px solid #000;
     padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    width: 70%;
+
+
+.center {
+        display: block;
+        margin: 20px auto; /* adjust as needed */
+        width: 80px; /* adjust as needed */
+        height: 80px; /* adjust as needed */
+        padding: 10px; /* adjust as needed */
+    }
+
 }
-
-.list-items {
-    font-size: 2em; /* Adjust size as needed */
-}
-
-
-/* pig movement */
 
 @keyframes move {
-    0% { transform: translateX(300%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(600%); }
+    100% { transform: translateX(-200%); }
 }
 
 

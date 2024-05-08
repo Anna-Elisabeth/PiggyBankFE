@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import Modal from "../modal/Modal";
+
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false); // New state for tracking modal open/close
+  const navigate = useNavigate();
+  const [modalMessage, setModalMessage] = useState('');
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -21,15 +27,32 @@ function Home() {
       const user = response.data.find(user => user.username === username && user.password === password);
 
       if (user) {
-        alert('Login successful');
+        setModalMessage(`Welcome to the sty ${username}, happy budgeting`); // Set success message
+        setIsModalOpen(true);
       } else {
-        alert('Login unsuccessful');
+        setModalMessage('Who oinks there? Please register'); // Set error message
+        setIsModalOpen(true);
       }
     } catch (error) {
       console.error(error);
       alert('Login unsuccessful');
     }
   };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+
+    if (modalMessage.includes('oinks')) {
+        navigate('/register'); // Navigate to register page if account creation failed
+    } else {
+        navigate('/planner'); // Navigate to home page if account creation succeeded
+    }
+
+    // Clear the form
+   
+    setUsername('');
+    setPassword('');
+};
 
   const styles = {
     container: {
@@ -96,6 +119,12 @@ function Home() {
           Login
         </button>
       </form>
+      <Modal
+                open={isModalOpen}
+                onClose={handleModalClose}
+                message={modalMessage}
+                onNavigate={handleModalClose}
+            />
     </div>
   );
 }
