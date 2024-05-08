@@ -13,7 +13,7 @@ import MeetTheTeam from './components/meetTheTeam/MeetTheTeam';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState } from 'react';
 import Help from './components/financialHelp/Help';
-import HintList from './components/hints/HintList';
+// import HintList from './components/hints/HintList';
 import MyCalendar from "./components/budgetPlanner/MyCalendar";
 
 
@@ -146,7 +146,7 @@ function App() {
             <Route path="/help" element={<Help />} />
             <Route path="/theteam" element={<MeetTheTeam />} />
             <Route path="/mycalendar" element={<MyCalendar />} />
-                <Route path='/hintlist' element={<HintList />} />
+                {/* <Route path='/hintlist' element={<HintList />} /> */}
           </Routes>
         </BrowserRouter>
       </div>
