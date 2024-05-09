@@ -74,6 +74,21 @@ function Home() {
       backgroundColor: "#FFB6C1", // Slightly darker pink for the form
       boxShadow: "0px 0px 10px rgba(0,0,0,0.1)",
     },
+    banner: {
+      width: "100%",
+      backgroundColor: "#e6a4b4",
+      color: "white",
+      padding: "25px 0",
+      textAlign: "center",
+      position: "relative", // Added position relative to contain the absolute position of the moving text
+    },
+    movingText: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      animation: "moveText 20s linear infinite", // Apply CSS animation
+    },
     input: {
       width: "100%",
       padding: "10px",
@@ -92,7 +107,13 @@ function Home() {
   };
 
   return (
-    <div style={styles.container}>
+    <div>
+      <div style={styles.banner}>
+        <h1 style={styles.movingText}>🐷 Having an account with us is kind of a pig deal 🐷</h1>
+        <br/ >
+        <a href="/register"><h5>Click here to register</h5> </a>
+      </div>
+      <div style={styles.container}>
       <h2>Login</h2>
       <form onSubmit={handleSubmit} style={styles.form}>
         <div>
@@ -125,6 +146,7 @@ function Home() {
                 message={modalMessage}
                 onNavigate={handleModalClose}
             />
+    </div>
     </div>
   );
 }
