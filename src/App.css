@@ -52,3 +52,12 @@
   color: #fff; /* Change text color on hover */
   background-color: #000; /* Change background color on hover */
 }
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
