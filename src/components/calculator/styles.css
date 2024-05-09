@@ -53,3 +53,44 @@
     color: white;
     font-size: 2.5rem;
   }
+
+  .heading {
+    background-color: white;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto;
+   
+}
+.background {
+  height: 400vh;
+  background-color: #FFD1DC;
+}
+
+.calculator-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px; /* Added padding to create a gap at the sides of the page */
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin: 0 40px; /* Increased margin to create a larger gap between the boxes and the calculator */
+  font-weight: bold;
+}
+
+.calculator-wrapper {
+  max-width: 80%; /* Adjust this value as needed */
+  flex-grow: 1; /* This will make the calculator take up the remaining space */
+  margin: 0 20px; /* This will create a gap between the calculator and the boxes */
+}
