@@ -8,6 +8,8 @@ import Jordan from "../../jordanpig.png";
 import Piers from "../../pierspig.png";
 import Rob from "../../robpig.png";
 import Chris from "../../chrispig.png";
+import Jenny from "../../jennypig.png";
+import Creative from "../../creativepig.png";
 
 function MeetTheTeam() {
   const [text1, setText1] = useState("");
@@ -180,13 +182,43 @@ function MeetTheTeam() {
               </h1>
             </Card.Title>
 
-                    <img src={Dylan} alt="Piggy Dylan"/>
-                    <img src={Piers} alt="Piggy Piers"/>
-                    <img src={Jordan} alt="Piggy Jordan"/>
-                    <img src={Rob} alt="Piggy Rob"/>
-                    <img src={Chris} alt="Piggy Chris"/>
+            <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+      <div style={{ width: "33%", textAlign: "center", marginBottom: "20px" }}>
+        <img src={Dylan} alt="Piggy Dylan" style={{ width: "100%" }} />
+      </div>
+      <div style={{ width: "33%", textAlign: "center", marginBottom: "20px" }}>
+        <img src={Piers} alt="Piggy Piers" style={{ width: "100%" }} />
+      </div>
+      <div style={{ width: "33%", textAlign: "center", marginBottom: "20px" }}>
+        <img src={Jordan} alt="Piggy Jordan" style={{ width: "100%" }} />
+      </div>
+    </div>
+    <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
+      <div style={{ width: "33%", textAlign: "center", marginBottom: "20px" }}>
+        <img src={Rob} alt="Piggy Rob" style={{ width: "100%" }} />
+      </div>
+      <div style={{ width: "33%", textAlign: "center", marginBottom: "20px" }}>
+        <img src={Chris} alt="Piggy Chris" style={{ width: "100%" }} />
+      </div>
+      <div style={{ width: "33%", textAlign: "center", marginBottom: "20px" }}>
+        <img src={Jenny} alt="Piggy Jenny" style={{ width: "100%" }} />
+      </div>
+    </div>
           </Card.Body>
+
         </Card>
+
+        <Card style={{ marginTop: "50px" }} border="light" border-10>
+  <Card.Body style={{ display: "flex", alignItems: "center" }}>
+    <div style={{ flex: 1 }}>
+      <h1><b>Are you ready to save your bacon? Join the herd today and start creating your own piggy profile! </b></h1>
+      <a href="/register">Click here to get on boar-d and start saving your piggy pounds!</a>
+    </div>
+    <div style={{ flex: 1, textAlign: "center" }}>
+      <img src={Creative} alt="Custom Piggy" style={{ width: "100%" }} />
+    </div>
+  </Card.Body>
+</Card>
       </div>
     </div>
   );
