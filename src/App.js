@@ -13,8 +13,9 @@ import MeetTheTeam from './components/meetTheTeam/MeetTheTeam';
 import Modal from 'react-bootstrap/Modal';
 import React, { useState } from 'react';
 import Help from './components/financialHelp/Help';
-// import HintList from './components/hints/HintList';
+import HintList from './components/hints/HintList';
 import MyCalendar from "./components/budgetPlanner/MyCalendar";
+
 
 
 
@@ -74,36 +75,41 @@ function App() {
                       Login
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/hints">
-                      Handy Hints
-                    </a>
-                  </li>
+                  <li class="nav-item ">
+                                        <a class="nav-link" href="/register">Register</a>
+                                    </li>
+                 
                   <li class="nav-item">
                     <a class="nav-link" href="/creditscore">
                       Credit Score
                     </a>
                   </li>
+                  <li class="nav-item ">
+
+<a class="nav-link" href="/help">Help & Support</a>
+
+</li>
                  
                                     <li class="nav-item ">
                                         <a class="nav-link" href="/calculator">Calculator</a>
                                     </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="/register">Register</a>
-                                    </li>
-                                    <li class="nav-item ">
+                                  
+                                   
 
-                                        <a class="nav-link" href="/help">Help & Support</a>
-
-                                    </li>
-
+                                  
+                                    <li class="nav-item">
+                    <a class="nav-link" href="/hints">
+                      Handy Hints
+                    </a>
+                  </li>
                                     <li class="nav-item ">
                                        
-                                        <a class="nav-link" href="/theteam">Meet The Team</a>
-                                    </li>
-                                    <li class="nav-item ">
+                                       <a class="nav-link" href="/hintlist">Your Fave. Hints</a>
+                                   </li>
+
+                                   <li class="nav-item ">
                                        
-                                       <a class="nav-link" href="/hintlist">Your fav. hints</a>
+                                       <a class="nav-link" href="/theteam">Meet The Team</a>
                                    </li>
 
               
@@ -146,7 +152,9 @@ function App() {
             <Route path="/help" element={<Help />} />
             <Route path="/theteam" element={<MeetTheTeam />} />
             <Route path="/mycalendar" element={<MyCalendar />} />
-                {/* <Route path='/hintlist' element={<HintList />} /> */}
+              <Route path='/hintlist' element={<HintList />} />
+       
+            
           </Routes>
         </BrowserRouter>
       </div>
