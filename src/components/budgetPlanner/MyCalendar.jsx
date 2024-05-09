@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import "./CalendarStyles.css";
+import "bootstrap/dist/css/bootstrap.min.css"; // Ensure Bootstrap is imported
 
 function MyCalendar() {
   const [date, setDate] = useState(new Date());
@@ -20,55 +21,30 @@ function MyCalendar() {
   };
 
   return (
-    <div
-      className="container"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <div className="container-calendar d-flex flex-column align-items-center justify-content-start vh-100">
+      <div className="w-100 text-center">
+        <h5 className="mb-3">
+          If you have Ham-nesia, be sure to add your upcoming payments to our ham-dy
+          calendar by selecting a date.
+        </h5>
+      </div>
       <Calendar
         onChange={handleDateChange}
         value={date}
         tileContent={({ date, view }) => {
           if (view === "month" && notes[date.toDateString()]) {
-            return (
-              <div
-                style={{
-                  backgroundColor: "#000",
-                  borderRadius: "50%",
-                  height: "10px",
-                  width: "10px",
-                  margin: "auto",
-                }}
-              ></div>
-            );
+            return <div className="noteCircle"></div>;
           }
         }}
       />
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      <div className="noteInputContainer mt-3">
         <div className="row">
           <div className="col-12">
-            <h6>A note for your calendar:</h6>
+            <h5>Add Ham-dy note here:</h5>
           </div>
           <div className="col-12">
             <input
-              style={{
-                fontSize: "15px",
-                padding: "10px",
-                borderWidth: "1px",
-                borderColor: "#ccc",
-                backgroundColor: "#f6ebee",
-                borderRadius: "10px",
-              }}
+              className="inputStyle"
               type="text"
               placeholder="Enter note for this date"
               value={notes[date.toDateString()] || ""}
