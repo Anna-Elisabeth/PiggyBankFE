@@ -1,22 +1,48 @@
+* CalendarStyles.css */
 /* Change the background color of the calendar */
 .react-calendar {
- background-color: #f6ebee; /* Light pink background */
+  background-color: #f6ebee; /* Light pink background */
 }
 
 /* Change the color of the calendar days */
 .react-calendar__month-view__days__day {
- color: #000000; 
+  color: #000000; /* Black text */
 }
 
 /* Change the background color of the selected day */
 .react-calendar__month-view__days__day--today,
 .react-calendar__month-view__days__day--weekend,
 .react-calendar__month-view__days__day--neighboringMonth {
- background-color: #f870c2; 
+  background-color: #f870c2; /* Pink background for today, weekend, and neighboring months */
 }
 
 /* Change the color of the navigation buttons */
 .react-calendar__navigation button {
- background-color: #f870c2; 
- color: rgb(0, 0, 0);
+  background-color: #f870c2; /* Pink background for navigation buttons */
+  color: rgb(0, 0, 0); /* Black text for navigation buttons */
+}
+
+/* Style for the note circle */
+.noteCircle {
+  background-color: #000000; /* Black background */
+  border-radius: 50%; /* Makes the circle */
+  height: 10px;
+  width: 10px;
+  margin: auto; /* Centers the circle */
+}
+.container-calendar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    #f5eee6,
+    #f3d7ca
+  ); /* Gradient background */
+  height: 100vh;
+  width: 100%;
+}
+.noteInputContainer {
+  padding: 30px; /* Adjust the value as needed */
+  border-width: 1px; 
 }
