@@ -11,6 +11,7 @@
     margin: 10px;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: white;
 }
 
 .hint-list-title {
@@ -21,5 +22,29 @@
 
 .hint-list-content {
     margin: 0;
+    font-size: 20px;
+}
+
+.background {
+    height: 400vh;
+    background-color: #FFD1DC;
+}
+
+.button {
+    border: 5px solid black;
+    background-color: #f3d7ca;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: bold; /* Use font-weight to make the text bold */
+    display: inline-block;
     font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for color */
+}
+
+.button:hover {
+    background-color: black; /* Set the background color to black on hover */
+    color: #f3d7ca; /* Set the text color to #f3d7ca on hover */
 }

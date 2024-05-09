@@ -5,8 +5,16 @@ import "slick-carousel/slick/slick-theme.css";
 import './hints.css';
 import fastPiggy from './fastPiggy.png';
 import axios from 'axios';
+import Modal from "../modal/Modal";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Hints = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false); // New state for tracking modal open/close
+    const navigate = useNavigate();
+    const [modalMessage, setModalMessage] = useState('');
     const hints = [
         "Avoid the debt sty. Don't let impulse purchases boar a hole in your wallet.",
         "Beware of get-rich-quick schemes - they're often just a pig in a poke, offering false promises.",
@@ -42,12 +50,20 @@ const Hints = () => {
         const hintsString = selectedHints.join(', ');
         try {
             await axios.post('http://localhost:8070/hint/create', { hintList: hintsString });
-            alert('Hint created successfully');
-            setSelectedHints([]); // Clear the list of selected hints
+            setModalMessage('Thanks Piglet.  Your Fave. List has been shared');
+            setIsModalOpen(true);
+            setSelectedHints([]);
         } catch (error) {
             console.error('Error creating hint', error);
+            setModalMessage('Sorry piglet, please try again');
+            setIsModalOpen(true);
         }
     };
+    const closeModalAndNavigate = () => {
+        setIsModalOpen(false);
+        navigate('/hints');
+    };
+
 
     return (
         <div className="hintbody">
@@ -69,11 +85,12 @@ const Hints = () => {
                         <li key={index} className="list-items">{hint}</li>
                     ))}
                 </ol>
-                <button onClick={handleCreateHint}>Share Your Favourite Hints</button>
+                <button className = "button" onClick={handleCreateHint}>Share Your Favourite Hints</button>
             </div>
             <div>
                 <img src={fastPiggy} alt='fast piggy' className="moving-image" />
             </div>
+            <Modal open={isModalOpen} onClose={closeModalAndNavigate} message={modalMessage} onNavigate={closeModalAndNavigate} />
         </div>
     );
 };

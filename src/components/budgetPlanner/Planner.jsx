@@ -56,8 +56,12 @@ function Planner() {
             <AddExpenseForm />
           </div>
         </div>
+        <br></br>
+        <a href="http://localhost:3000/mycalendar" style={{fontSize:"30px", color:"rgba(255, 20, 147"}}><strong><i>If you have ham-nesia, be sure to add your payments to our ham-dy calendar by clicking here</i></strong></a>
       </div>
     </AppProvider>
+
+   
    
 
 
