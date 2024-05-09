@@ -80,14 +80,14 @@ function Home() {
       color: "white",
       padding: "25px 0",
       textAlign: "center",
-      position: "relative", // Added position relative to contain the absolute position of the moving text
+      position: "relative", 
     },
     movingText: {
       position: "absolute",
       top: 0,
       left: 0,
       width: "100%",
-      animation: "moveText 20s linear infinite", // Apply CSS animation
+      animation: "moveText 20s linear infinite", // CSS animation
     },
     input: {
       width: "100%",
