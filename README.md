@@ -15,6 +15,7 @@ To install the project, follow these steps:
 1. Clone the repository: `git clone https://github.com/Anna-Elisabeth/PiggyBankFE.git
 2. Navigate to the project directory
 3. Install the dependencies: `npm install`
+4. Used alongside back end repo https://github.com/ZMichaelaK/PiggyBankBE
 
 ## Usage
 
